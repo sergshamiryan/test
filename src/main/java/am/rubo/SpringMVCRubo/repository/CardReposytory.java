@@ -10,4 +10,8 @@ public interface CardReposytory extends JpaRepository <Card,Integer> {
     Optional<Card> getById(int id);
 
     Card getByHoler (String holder);
+
+
+
+
 }

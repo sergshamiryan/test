@@ -8,7 +8,8 @@ import java.util.List;
 public interface CarRepository extends JpaRepository<Car,Integer> {
 
 
+    boolean existsByVin(String vin);
 
 
-
+    boolean existsByVinAndIdNot(String vin, int id);
 }

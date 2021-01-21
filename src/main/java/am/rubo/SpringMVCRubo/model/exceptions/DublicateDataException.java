@@ -1,5 +1,9 @@
 package am.rubo.SpringMVCRubo.model.exceptions;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+
 public class DublicateDataException extends Exception {
 
     public DublicateDataException (String message){
