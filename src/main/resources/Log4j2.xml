@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFile">
+            <FileName>/var/logs/api.log</FileName>
+            <FilePattern>/var/logs/api/%d{yyyy-MM-dd}.log</FilePattern>
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval ="1"> </TimeBasedTriggeringPolicy>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="/var/logs/api" maxDepth="2">
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" level="info"/>
+            <AppenderRef ref="RollingFIle" level="info"/>
+        </Root>
+    </Loggers>
+</Configuration>

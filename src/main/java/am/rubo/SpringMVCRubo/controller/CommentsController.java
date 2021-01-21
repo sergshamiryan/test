@@ -29,6 +29,7 @@ public class CommentsController {
     public CommentService commentService;
 
 
+
     @GetMapping("/comments")
     public ModelAndView getCommentPage(@SessionAttribute("user") User sessionUser) { //=== (User user = (User) session.getAttribute("user");
 

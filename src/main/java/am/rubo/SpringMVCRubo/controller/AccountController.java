@@ -3,24 +3,22 @@ package am.rubo.SpringMVCRubo.controller;
 
 import am.rubo.SpringMVCRubo.model.User;
 import am.rubo.SpringMVCRubo.model.exceptions.DublicateDataException;
-import am.rubo.SpringMVCRubo.model.exceptions.InternalServerException;
 import am.rubo.SpringMVCRubo.model.exceptions.NotFoundException;
 import am.rubo.SpringMVCRubo.service.UserService;
 import am.rubo.SpringMVCRubo.util.Messages;
-import am.rubo.SpringMVCRubo.util.Pages;
-import am.rubo.SpringMVCRubo.util.ParameterKeys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 
-
 import static am.rubo.SpringMVCRubo.util.Messages.INTERNAL_SERVICE_ERROR;
-import static am.rubo.SpringMVCRubo.util.Messages.PASSWORD_CHANGE_SUCCESS;
 import static am.rubo.SpringMVCRubo.util.Pages.*;
-import static am.rubo.SpringMVCRubo.util.ParameterKeys.*;
+import static am.rubo.SpringMVCRubo.util.ParameterKeys.MESSAGE_ATTRIBUTE_KEY;
+import static am.rubo.SpringMVCRubo.util.ParameterKeys.USER_ATTRIBUTE_KEY;
 
 
 @Controller
@@ -28,6 +26,8 @@ public class AccountController {
 
      @Autowired
     private UserService userService;
+
+
 
 
      @PostMapping("/login")

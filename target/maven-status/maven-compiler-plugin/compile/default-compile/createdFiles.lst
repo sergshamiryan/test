@@ -8,11 +8,15 @@ am\rubo\SpringMVCRubo\util\DataSourceR.class
 am\rubo\SpringMVCRubo\util\UsernameValidator.class
 am\rubo\SpringMVCRubo\util\XdraftXMainForTransaction.class
 am\rubo\SpringMVCRubo\controller\CommentsController.class
+am\rubo\SpringMVCRubo\repository\CardReposytory.class
 am\rubo\SpringMVCRubo\service\Impl\CommentServiceImpl.class
 am\rubo\SpringMVCRubo\controller\AccountsSecureController.class
+am\rubo\SpringMVCRubo\controller\CardController.class
 am\rubo\SpringMVCRubo\model\exceptions\InvalidParameterException.class
 am\rubo\SpringMVCRubo\service\Impl\UserServiceImpl.class
+am\rubo\SpringMVCRubo\model\Card.class
 am\rubo\SpringMVCRubo\model\Comment.class
+am\rubo\SpringMVCRubo\service\Impl\CardServiceImpl.class
 am\rubo\SpringMVCRubo\model\exceptions\NotFoundException.class
 am\rubo\SpringMVCRubo\controller\TestControllerV2.class
 am\rubo\SpringMVCRubo\model\exceptions\InternalServerException.class
